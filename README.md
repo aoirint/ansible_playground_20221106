@@ -47,8 +47,8 @@ sudo docker compose version
   - 各Taskでbecomeを指定しても、`vagrant -> root -> anotheruser`ではなく、`vagrant -> anotheruser`となって失敗するはず
   - `ansible_become`または`become`を、`inventory.yaml`または`playbook.yaml`のどちらに記述するべきか
     - Playbookを書くにあたって、`become`が使用できない、という制約を無視できない
-    - `inventory.yaml`は、インスタンス固有の性質に依存する設定を記述し、`playbook.yaml`はインスタンスにできるだけ依存しない形で記述する（OSとかは無理だが）のがよさそうだと認識している（あるいは、Playbookの実行に必要な接続に関わる設定が`inventory.yaml`なのかもしれない）
-      - しかし、`become`が必要とされるのは、インスタンス固有の性質なので`inventory.yaml`に記述しているが、Playbookは`become`が設定されているという前提で記述することになる、という実態の乖離がある
+    - `inventory.yaml`は、サーバインスタンス固有の性質に依存する設定を記述し、`playbook.yaml`はインスタンスにできるだけ依存しない形で記述する（OSとかは無理だが）のがよさそうだと認識している（あるいは、Playbookの実行に必要な接続に関わる設定が`inventory.yaml`なのかもしれない）
+      - しかし、`become`が必要とされるのは、サーバインスタンス固有の性質なので`inventory.yaml`に記述しているが、Playbookは`become`が設定されているという前提で記述することになる、という実態の乖離がある
 - ログインユーザ`vagrant`がパスワードレスsudo権限を持っている（実質`PermitRootLogin yes`と同等では？）
 - Vagrant Ubuntu Boxは、デフォルトで`ubuntu`というパスワードレスsudoユーザが存在するが、別途`vagrant`ユーザでパスワードレスsudoをセットアップしていて、冗長
   - Vagrantにおけるプロビジョニングは、Ansibleの使用という点において本質的ではないと思われるので、`ubuntu`ユーザを使うように変更してもいいかもしれない
