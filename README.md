@@ -45,4 +45,6 @@ sudo docker compose version
 - デフォルトでbecome環境なので、各Taskでbecomeが使えない（はず）
   - become in becomeができず、ログインユーザでbecomeを試みる挙動になるため
   - 各Taskでbecomeを指定しても、`vagrant -> root -> anotheruser`ではなく、`vagrant -> anotheruser`となって失敗するはず
-- ログインユーザがパスワードレスsudo権限を持っている（実質`PermitRootLogin yes`と同等では？）
+- ログインユーザ`vagrant`がパスワードレスsudo権限を持っている（実質`PermitRootLogin yes`と同等では？）
+- Vagrant Ubuntu Boxは、デフォルトで`ubuntu`というパスワードレスsudoユーザが存在するが、別途`vagrant`ユーザでパスワードレスsudoをセットアップしていて、冗長
+  - Vagrantにおけるプロビジョニングは、Ansibleの使用という点において本質的ではないと思われるので、`ubuntu`ユーザを使うように変更してもいいかもしれない
