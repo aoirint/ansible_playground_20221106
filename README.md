@@ -49,12 +49,15 @@ vagrant up
 # Execute the playbook
 ansible-playbook -i inventory.yaml playbook.yaml
 
-# Open a ssh connection into the Vagrant VM
+# Open a ssh connection into the VM
 vagrant ssh
 
-# Check the Docker environment inside the Vagrant VM installed by Ansible
+# Check the Docker environment inside the VM installed by Ansible
 sudo docker version
 sudo docker compose version
+
+# Remove the VM for cleaning up
+vagrant destroy
 ```
 
 ## 問題点
