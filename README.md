@@ -2,11 +2,15 @@
 
 構成管理ツール Ansible のおためし
 
-## 依存関係
+## 実行環境
 
+- Ubuntu 20.04 (Host OS)
 - VirtualBox 7.0
+  - <https://www.virtualbox.org/wiki/Linux_Downloads>
 - Vagrant 2.3
+  - <https://developer.hashicorp.com/vagrant/downloads>
 - Ansible 2.12
+  - <https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html#installing-ansible-on-ubuntu>
 
 ## 何をするか
 
