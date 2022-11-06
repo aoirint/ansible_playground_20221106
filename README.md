@@ -30,11 +30,11 @@ Ansibleでプロビジョニングする。
 ## 実行例
 
 ```shell
-# Generate ssh key pair
+# Generate ssh key pair to sign in the Vagrant VM
 mkdir -p secrets
 ssh-keygen -f secrets/key
 
-# Initialize a Vagrant VM
+# Initialize the Vagrant VM
 vagrant up
 
 # Execute the playbook
