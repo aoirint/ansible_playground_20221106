@@ -30,16 +30,20 @@ Ansibleでプロビジョニングする。
 ## 実行例
 
 ```shell
+# Generate ssh key pair
 mkdir -p secrets
-
 ssh-keygen -f secrets/key
 
+# Initialize a Vagrant VM
 vagrant up
 
+# Execute the playbook
 ansible-playbook -i inventory.yaml playbook.yaml
 
+# Open ssh connection into the Vagrant VM
 vagrant ssh
 
+# Check Docker environment inside the Vagrant VM installed by Ansible
 sudo docker version
 sudo docker compose version
 ```
