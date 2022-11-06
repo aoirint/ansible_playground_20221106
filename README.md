@@ -39,7 +39,7 @@ AnsibleでDocker/Docker Composeがインストールされた環境を宣言し�
 # Remove the VM's SSH server key fingerprint from the host's known_hosts (required for re-created VMs)
 ssh-keygen -f "$HOME/.ssh/known_hosts" -R "192.168.56.10"
 
-# Generate a ssh key pair (empty password) to sign in the Vagrant VM
+# Generate a ssh key pair (without password) to sign in the Vagrant VM
 mkdir -p secrets
 ssh-keygen -f secrets/key -P ""
 
