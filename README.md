@@ -45,6 +45,7 @@ sudo docker compose version
 - デフォルトでbecome環境なので、各Taskでbecomeが使えない（はず）
   - become in becomeができず、ログインユーザでbecomeを試みる挙動になる（はずの）ため
   - 各Taskでbecomeを指定しても、`vagrant -> root -> anotheruser`ではなく、`vagrant -> anotheruser`となって失敗するはず
+    - becomeがどのように実行されるかによる？ `sudo -l anotheruser`ならば成功しそう
   - `ansible_become`または`become`を、`inventory.yaml`または`playbook.yaml`のどちらに記述するべきか
     - Playbookを書くにあたって、`become`が使用できない、という制約を無視できない
     - `inventory.yaml`は、サーバインスタンス固有の性質に依存する設定を記述し、`playbook.yaml`はインスタンスにできるだけ依存しない形で記述する（OSとかは無理だが）のがよさそうだと認識している（あるいは、Playbookの実行に必要な接続に関わる設定が`inventory.yaml`なのかもしれない）
