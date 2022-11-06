@@ -14,4 +14,9 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: <<-SHELL
     cat /home/vagrant/.ssh/key.pub >> /home/vagrant/.ssh/authorized_keys
   SHELL
+
+  # Add passwordless sudo permission to the login user
+  config.vm.provision "shell", inline: <<-SHELL
+    echo "vagrant ALL=NOPASSWD: ALL" >> /etc/sudoers.d/vagrant
+  SHELL
 end
