@@ -30,6 +30,10 @@ Ansibleでプロビジョニングする。
 ## 実行例
 
 ```shell
+mkdir -p secrets
+
+ssh-keygen -f secrets/key
+
 vagrant up
 
 ansible-playbook -i inventory.yaml playbook.yaml
