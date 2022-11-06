@@ -8,10 +8,10 @@
 - Vagrant 2.3
 - Ansible 2.12
 
-## 構成
+## 何をするか
 
 VagrantでVM（Ubuntu 20.04 with sshd）を立て、
-Ansibleでプロビジョニングする。
+AnsibleでDocker/Docker Composeがインストールされた環境を宣言し、適用する。
 
 ## 参考
 
