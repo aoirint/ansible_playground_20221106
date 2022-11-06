@@ -15,13 +15,15 @@ AnsibleでDocker/Docker Composeがインストールされた環境を宣言し�
 
 ## 参考
 
+- <https://docs.ansible.com/ansible/latest/getting_started/get_started_inventory.html>
+- <https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html>
+- <https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html>
 - <https://blog.apar.jp/linux/5154/>
 - <https://docs.ansible.com/ansible/latest/user_guide/become.html>
 - <https://www.digitalocean.com/community/tutorials/how-to-use-ansible-to-install-and-set-up-docker-on-ubuntu-20-04>
 - <https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04>
 - <https://docs.docker.com/engine/install/ubuntu/>
 - <https://www.shellhacks.com/ansible-sudo-a-password-is-required/>
-- <https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html>
 - <https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html>
 - <https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_key_module.html>
 - <https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_repository_module.html>
