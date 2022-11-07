@@ -9,7 +9,7 @@
   - <https://www.virtualbox.org/wiki/Linux_Downloads>
   - ハードウェア仮想化機能 Intel VT-x または AMD-V が有効化された環境が必要
     - KVM等による仮想環境として提供される通常のVPS等の環境、WSL等では動作不能
-    - 以下のコマンドで1以上の値が出力されれば、VT-x または AMD-V がサポートされたCPUである（別途BIOSでの有効化が必要な場合もある）
+    - 以下のコマンドで1以上の値が出力されれば、VT-x または AMD-V がサポートされたCPUである（利用には、別途BIOSでの有効化が必要な場合もある）
       - `egrep -c '(vmx|svm)' /proc/cpuinfo`
       - <https://help.ubuntu.com/community/KVM/Installation#Pre-installation_checklist>
 - Vagrant 2.3
