@@ -7,6 +7,8 @@
 - Ubuntu 20.04 (Host OS)
 - VirtualBox 7.0
   - <https://www.virtualbox.org/wiki/Linux_Downloads>
+  - ハードウェア仮想化機能 Intel VT-x または AMD-V が有効化された環境が必要
+    - KVM等による仮想環境として提供される通常のVPS等の環境では動作不可
 - Vagrant 2.3
   - <https://developer.hashicorp.com/vagrant/downloads>
 - Ansible 2.12
